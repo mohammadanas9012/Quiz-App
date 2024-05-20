@@ -1,6 +1,6 @@
 const questions = [
     {
-        question: "Which is the largest animal in the world",
+        question: "Which is the largest animal in the world ?",
         answers: [
             {text: "Shark", correct: false},
             {text: "Blue whale", correct: true},
@@ -9,16 +9,16 @@ const questions = [
         ]
     },
     {
-        question: "Which is the smallest country in the world",
+        question: "Which is the smallest country in the world ?",
         answers: [
             {text: "Vatican City", correct: true},
-            {text: "Bhutan", correct: true},
+            {text: "Bhutan", correct: false},
             {text: "Nepal", correct: false},
             {text: "Shrilanka", correct: false},
         ] 
     },
     {
-        question: "Which is the largest desert in the world",
+        question: "Which is the largest desert in the world ?",
         answers: [
             {text: "Kalahari", correct: false},
             {text: "Gobi", correct: false},
@@ -27,7 +27,7 @@ const questions = [
         ]
     },
     {
-        question: "Which is the smallest continent in the world",
+        question: "Which is the smallest continent in the world ?",
         answers: [
             {text: "Asia", correct: false},
             {text: "Australia", correct: true},
@@ -37,8 +37,8 @@ const questions = [
     }
 ];
 
-const questionElement=document.getElementById("question");
-const answerButtons=document.getElementById("answer-buttons");
+const questionElement = document.getElementById("question");
+const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
@@ -96,7 +96,7 @@ function selectAnswer(e){
 
 function showScore(){
     resetState();
-    questionElement.innerHTML = `You scored ${score} out of {questions.length}!`;
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
 }
